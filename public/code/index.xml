@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Davis Nelson - InfoSec Blog</title>
+    <link>/code/</link>
+    <description>Recent content in Code on Davis Nelson - InfoSec Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Feb 2021 20:25:19 -0800</lastBuildDate>
+    
+	<atom:link href="/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making Sense of Your Data With Python</title>
+      <link>/code/python-data-analysis/</link>
+      <pubDate>Mon, 22 Feb 2021 20:25:19 -0800</pubDate>
+      
+      <guid>/code/python-data-analysis/</guid>
+      <description>About  Communication is a massive part of any good security program. Being able to demonstrate successes, failures, and areas of improvement for organizational security posture to the executive level is critical to receiving buy-in and resources from your business to mitigate risk in your environment effectively. If the business does not see the need for spending more time and money on security, they likely will turn their attention elsewhere.</description>
+    </item>
+    
+  </channel>
+</rss>

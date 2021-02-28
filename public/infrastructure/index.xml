@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure on Davis Nelson - InfoSec Blog</title>
+    <link>/infrastructure/</link>
+    <description>Recent content in Infrastructure on Davis Nelson - InfoSec Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Feb 2021 20:25:19 -0800</lastBuildDate>
+    
+	<atom:link href="/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes Basics</title>
+      <link>/infrastructure/kubernetes-basics/</link>
+      <pubDate>Mon, 22 Feb 2021 20:25:19 -0800</pubDate>
+      
+      <guid>/infrastructure/kubernetes-basics/</guid>
+      <description>Kubernetes Basics What is it?  Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker. K8s uses a collection of controller services hosted on a master server(s) to manage worker servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.  High-level K8s Architecture  Kubernetes Documentation at: https://kubernetes.</description>
+    </item>
+    
+  </channel>
+</rss>

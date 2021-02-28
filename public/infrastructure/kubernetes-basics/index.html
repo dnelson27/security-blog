@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Kubernetes Basics What is it?  Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker. K8s uses a collection of controller services hosted on a master server(s) to manage worker servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.  High-level K8s Architecture  Kubernetes Documentation at: https://kubernetes." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/infrastructure/kubernetes-basics/" />
+
+
+    <title>
+        
+            Kubernetes Basics :: Davis Nelson - InfoSec Blog  — Cloud and Network Security Writeups, News, and Walkthroughs
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d7bdd8ee18bfbf4c605488a7e5b1b92cd980dfeed2bdaeab4dd5e931a7a78bc0.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Kubernetes Basics">
+<meta itemprop="description" content="Kubernetes Basics What is it?  Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker. K8s uses a collection of controller services hosted on a master server(s) to manage worker servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.  High-level K8s Architecture  Kubernetes Documentation at: https://kubernetes.">
+<meta itemprop="datePublished" content="2021-02-22T20:25:19-08:00" />
+<meta itemprop="dateModified" content="2021-02-22T20:25:19-08:00" />
+<meta itemprop="wordCount" content="1173">
+<meta itemprop="image" content=""/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="Kubernetes Basics"/>
+<meta name="twitter:description" content="Kubernetes Basics What is it?  Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker. K8s uses a collection of controller services hosted on a master server(s) to manage worker servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.  High-level K8s Architecture  Kubernetes Documentation at: https://kubernetes."/>
+
+
+
+
+    <meta property="og:title" content="Kubernetes Basics" />
+<meta property="og:description" content="Kubernetes Basics What is it?  Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker. K8s uses a collection of controller services hosted on a master server(s) to manage worker servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.  High-level K8s Architecture  Kubernetes Documentation at: https://kubernetes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/infrastructure/kubernetes-basics/" />
+<meta property="og:image" content=""/>
+<meta property="article:published_time" content="2021-02-22T20:25:19-08:00" />
+<meta property="article:modified_time" content="2021-02-22T20:25:19-08:00" /><meta property="og:site_name" content="Davis Nelson - InfoSec Blog" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-02-22 20:25:19 -0800 PST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd ~/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/code">Code</a></li><li><a href="/infrastructure">Infrastructure</a></li><li><a href="/red-team">Red Team</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="/infrastructure/kubernetes-basics/">Kubernetes Basics</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <h1 id="kubernetes-basics">Kubernetes Basics</h1>
+<h2 id="what-is-it">What is it?</h2>
+<ul>
+<li>Kubernetes (K8s) is an open-source container orchestration tool for managing applications on container runtimes like Docker.</li>
+<li>K8s uses a collection of controller services hosted on a <strong>master</strong> server(s) to manage <strong>worker</strong> servers in a server cluster. The application code is held on the worker servers, and the master server controls when, what, and how containers are built on the worker servers.</li>
+</ul>
+<h3 id="high-level-k8s-architecture">High-level K8s Architecture</h3>
+<p><img src="/images/simple_kubernetes.png" alt=""></p>
+<ul>
+<li>Kubernetes Documentation at: <a href="https://kubernetes.io/docs/home/">https://kubernetes.io/docs/home/</a></li>
+<li>Docker Documentation at: <a href="https://docs.docker.com/">https://docs.docker.com/</a></li>
+</ul>
+<hr>
+<h2 id="why-use-it">Why use it?</h2>
+<ul>
+<li>K8s is a tool that allows you to centrally manage container image deployment and updates, define resource usage standards, monitor the health of an application, and maintain control over an environment at-scale when running services on containers.</li>
+<li>If configured correctly, provides high fault-tolerance for your container app.</li>
+<li>it is best use where containers are being used for large apps with multiple microservices requiring High Availability and redundancy.</li>
+</ul>
+<hr>
+<h2 id="alternatives">Alternatives</h2>
+<ul>
+<li>K8s is NOT the only solution for managing containers at scale, but it is the most popular. Other solutions include Amazon Elastic Container Service (ECS), Docker Swarm, and OpenShift.</li>
+<li>For containerized small apps on a single server,a more straight-forward service with less focus on distributed services like Docker Compose is the best way to go.</li>
+<li>Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE) are managed solutions that allow teams to delegate the management of the underlying operating system and hardware to a cloud provider.</li>
+</ul>
+<hr>
+<h2 id="a-few-key-sysopsdeployment-concepts">A few key SysOps/Deployment Concepts</h2>
+<h3 id="high-availability">High Availability</h3>
+<ul>
+<li>
+<p><strong>High Availability (HA)</strong> is the concept of making your application/service fault-tolerant and redundant, as to prevent downtime in the case of an incident. Examples of incidents that High Availability configurations attempt to solve for are:</p>
+<ul>
+<li>A server is overloaded with requests and users are unable to reach the service.</li>
+<li>A database experiences temporary IO suspension due to a scheduled backup.</li>
+<li>A natural disaster knocks out power in a data center, leaving your servers unresponsive for a period of time.</li>
+<li>A bug causes an application to crash unexpectedly.</li>
+</ul>
+</li>
+<li>
+<p>Common solutions for providing <strong>High Availability</strong> include:</p>
+<ul>
+<li>hosting servers in multiple data centers across multiple regions (ideally, at least 3).</li>
+<li>backing up data to storage that is isolated from the data store being backed-up.</li>
+<li>Automate health-checks to fail-over between servers if a server is experiencing issues</li>
+<li>Disaster planning, have back-up servers on standby</li>
+</ul>
+</li>
+</ul>
+<h2 id="scalability">Scalability</h2>
+<ul>
+<li>Providing <strong>Scalability</strong> in the context of a application is the process of building a system to efficiently adjust for variance in compute or traffic load. When the amount of people shopping on a site doubles for Cyber Monday, an online store and its components should be able to adjust on-the-fly to handle the load</li>
+<li>To allow your application/service to be scalable, you can:
+<ul>
+<li>Monitor the health/resource usage of application servers and write code to create new virtual machines to meet new requirements. Have your automation delete these new virtual machines when the load is back to normal.</li>
+<li>Use one of the many solutions provided by cloud providers, like AWS EC2 AutoScaling, to create new cloud servers to match the compute capacity needed, delete these servers when the load decreases.</li>
+<li>Use Load Balancers to direct traffic to instances using round-robin or other traffic direction method to allow traffic to reach new servers on-the-fly</li>
+</ul>
+</li>
+<li>Applications can scale <strong>horizontally</strong> or <strong>vertically</strong>
+<ul>
+<li>Horizontal scaling: Create new instances of the application server of the same/similar size. Ex: a server uses 90% of its CPU capacity, a new virtual server is created with the same CPU capacity and requests are load-balanced between the two servers.</li>
+<li>Vertical scaling: Create a larger version of the application server. Ex: a server uses 90% of its CPU capacity, a new instance is created with a higher-end CPU and traffic is redirected.</li>
+</ul>
+</li>
+</ul>
+<h3 id="okay-finally-back-to-kubernetes">Okay, finally back to Kubernetes</h3>
+<h2 id="kubernetes-components">Kubernetes Components</h2>
+<h3 id="key-terms">Key Terms:</h3>
+<ul>
+<li><strong>Node:</strong> A single virtual/physical server/instance</li>
+<li><strong>Control Plane</strong>: the server(s)/instance(s) that command and control the worker nodes</li>
+<li><strong>Pod:</strong> One or more containers on a node, smallest component in K8s</li>
+<li><strong>Load Balancer:</strong> A physical or virtual networking component that directs traffic between nodes.</li>
+</ul>
+<h3 id="nodes">Nodes</h3>
+<ul>
+<li>Nodes are individual physical/virtual servers that contain a number of components to send/receive instructions from the master node (see <strong>Control Plane</strong> for details) and host the containers running your service. Node components include:
+<ul>
+<li><strong>Pod:</strong> the smallest unit in the K8s architecture, pods contain one or more containers that are tightly coupled to serve a single function. Multiple container pods might be implemented where a separate container is acting as a networking proxy, acting as a helper or sidecar container to handle logging, monitoring.</li>
+<li><strong>kubelet:</strong> the K8s agent running on each node that communicates back to the control plane.</li>
+<li><strong>kube-proxy</strong>: A network proxy that maintains network rules permitting traffic from the node to other parts of the cluster, or outside of the cluster.</li>
+</ul>
+</li>
+</ul>
+<h3 id="control-plane">Control Plane</h3>
+<ul>
+<li>The Control Plane is a collection of cluster management services that run across multiple servers. These services track the health of worker nodes, keep inventory of what containers are deployed and where, track and update what container images are being used, and provide an API interface for administrators to manage the cluster.</li>
+<li>Some Control Plane Components Are:
+<ul>
+<li><strong>API Server:</strong>
+<ul>
+<li>Exposes the K8s API, usually with the <code>kube-apiserver</code> implementation. This implementation scales to match load needs by deploying new instances to handle API requests (horizontal scaling)</li>
+</ul>
+</li>
+<li><strong>Cloud Controller Manager (optional if running locally):</strong>
+<ul>
+<li>Controls the cloud infrastructure for your specific cloud provider&rsquo;s infrastructure.</li>
+<li>Service Controller: Creates load balancers</li>
+<li>Route Controller: manages routes within the cloud provider&rsquo;s infrastructure</li>
+<li>Node controller: Checks to see if an unresponsive node was terminated by the cloud provider</li>
+</ul>
+</li>
+<li><strong>Controller Manager:</strong> <code>kube-controller-manager</code> runs each of the controller processes as a single binary. These controller processes include:
+<ul>
+<li>Node controller: Checks on the status of nodes and respond when a node goes down</li>
+<li>Replication controller: maintains the correct number of pods.</li>
+<li>Endpoints controller: joins services to pods by populating an Endpoints object</li>
+<li>Service account and Token controllers; Creates the default accounts and API access tokens for new namespaces</li>
+</ul>
+</li>
+<li><strong>Scheduler:</strong> kube-scheduler watches for newly created pods that have not been assigned a node, and selects a node for them to run on based on resource requiremetnts, hardware/software policy constraints, label-based eligibility (affinity and anti-affinity), deadlines and workload interference.</li>
+<li><strong>etcd:</strong> A highly-available (distributed across servers) key-value store for all persistent cluster data. Periodic back-ups are recommended here.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/k8s_diagram.png" alt=""></p>
+<h2 id="in-practice">In Practice</h2>
+<ul>
+<li>Kubernetes at-scale can require a significant amount of engineering resources and can become complex as an application grows and the number of microservices increases. Running self-managed K8s in production should be restricted to companies with experienced staff and the people-power to manage it securely.</li>
+<li>If a team runs a service or application running across multiple cloud providers, A service like Amazon&rsquo;s Elastic Kubernetes Service (EKS) may be a better alternative. EKS provides high availability and redundancy by default, with three master nodes across three availability zones (data centers) by default, but can still be controlled via the K8s api using kube-ctl.</li>
+<li>If a team runs an AWS-native application, a managed service like Amazon ECS on EC2 or Fargate can be employed to more easily integrate with AWS-native services.</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span><span><a href="posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.af435e44374f1e99a669ea8cd5bb9a2fceed80588941a451bfddb66b86a67c9f40b0f417e9543a763f809aa7e9300d7b1d69bf99615810ba02ac70396d50fad5.js" integrity="sha512-r0NeRDdPHpmmaeqM1buaL87tgFiJQaRRv922a4amfJ9AsPQX6VQ6dj&#43;AmqfpMA17HWm/mWFYELoCrHA5bVD61Q=="></script>
+
+
+
+    </body>
+</html>
